@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mikenikles/serverless-chatbot/issues"
   },
-  "homepage": "https://github.com/mikenikles/serverless-chatbot#readme"
+  "homepage": "https://github.com/mikenikles/serverless-chatbot#readme",
+  "devDependencies": {
+    "lerna": "^3.6.0"
+  }
 }
