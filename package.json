@@ -1,0 +1,22 @@
+{
+  "name": "serverless-chatbot",
+  "version": "1.0.0",
+  "description": "A sample architecture for a Google Hangouts Chat bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikenikles/serverless-chatbot.git"
+  },
+  "author": "Mike Nikles, @mikenikles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikenikles/serverless-chatbot/issues"
+  },
+  "homepage": "https://github.com/mikenikles/serverless-chatbot#readme",
+  "devDependencies": {
+    "lerna": "^3.6.0"
+  }
+}
