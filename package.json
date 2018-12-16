@@ -4,6 +4,7 @@
   "description": "A sample architecture for a Google Hangouts Chat bot.",
   "main": "index.js",
   "scripts": {
+    "deploy:reminder-bot-receiver": "lerna run deploy --stream --scope=\"reminder-bot-receiver\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

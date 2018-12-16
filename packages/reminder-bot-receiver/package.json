@@ -1,0 +1,27 @@
+{
+  "name": "reminder-bot-receiver",
+  "version": "1.0.0",
+  "description": "Receives messages published to a Pub/Sub topic by the Hangouts Chat API.",
+  "author": "Mike Nikles <mikenikles@gmail.com>",
+  "homepage": "https://github.com/mikenikles/serverless-chatbot/tree/master/packages/reminder-bot-receiver#readme",
+  "license": "ISC",
+  "main": "lib/reminder-bot-receiver.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikenikles/serverless-chatbot.git"
+  },
+  "scripts": {
+  	"deploy": "gcloud functions deploy reminderBotReceiver --runtime nodejs8 --trigger-topic reminder-bot-messages-in",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mikenikles/serverless-chatbot/issues"
+  }
+}
