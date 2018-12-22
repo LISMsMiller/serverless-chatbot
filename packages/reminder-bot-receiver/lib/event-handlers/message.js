@@ -1,4 +1,5 @@
 const chrono = require('chrono-node')
+const { persistReminder } = require('../db')
 
 const determineReminderSubject = (userInput) => {
   // Object reference at https://github.com/wanasit/chrono#usage
@@ -14,7 +15,7 @@ const determineReminderSubject = (userInput) => {
   return subject.trim();
 }
 
-module.exports = (chatEventBody) => {
+module.exports = async (chatEventBody) => {
   const userInput = chatEventBody.message.text
   console.log(`Processing event type MESSAGE for message text: ${userInput}`)
 
@@ -23,4 +24,13 @@ module.exports = (chatEventBody) => {
 
   const reminderSubject = determineReminderSubject(userInput)
   console.log(`Found subject: ${reminderSubject}`)
+
+  console.log('Persisting reminder...')
+  await persistReminder(chatEventBody.message.space.name,
+    chatEventBody.message.thread.name,
+    userInput,
+    reminderDate,
+    reminderSubject,
+    chatEventBody.user.name)
+  console.log('Reminder successfully persisted.')
 }
