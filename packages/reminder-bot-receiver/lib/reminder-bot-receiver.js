@@ -10,7 +10,7 @@ exports.reminderBotReceiver = async (event, context) => {
   console.log('Chat event body:', chatEventBody)
 
   try {
-    EVENT_HANDLERS[chatEventBody.type]()
+    EVENT_HANDLERS[chatEventBody.type](chatEventBody)
   } catch (error) {
     console.error(new Error(`Couldn't process event due to: ${error}`))
   }
