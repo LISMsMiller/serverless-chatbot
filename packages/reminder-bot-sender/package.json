@@ -18,10 +18,13 @@
     "url": "git+https://github.com/mikenikles/serverless-chatbot.git"
   },
   "scripts": {
-    "deploy": "gcloud functions deploy reminderBotSender --runtime nodejs8 --trigger-topic reminder-bot-messages-out",
+    "deploy": "gcloud functions deploy reminderBotSender --runtime nodejs8 --trigger-topic reminder-bot-messages-out --env-vars-file .env.yaml",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/mikenikles/serverless-chatbot/issues"
+  },
+  "dependencies": {
+    "googleapis": "^36.0.0"
   }
 }
