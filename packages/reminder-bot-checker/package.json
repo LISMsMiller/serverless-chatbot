@@ -25,6 +25,7 @@
     "url": "https://github.com/mikenikles/serverless-chatbot/issues"
   },
   "dependencies": {
-    "@google-cloud/firestore": "^0.19.0"
+    "@google-cloud/firestore": "^0.19.0",
+    "@google-cloud/pubsub": "^0.22.2"
   }
 }
