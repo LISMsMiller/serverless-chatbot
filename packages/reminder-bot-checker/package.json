@@ -23,5 +23,8 @@
   },
   "bugs": {
     "url": "https://github.com/mikenikles/serverless-chatbot/issues"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^0.19.0"
   }
 }
