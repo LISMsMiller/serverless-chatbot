@@ -18,6 +18,7 @@
     "url": "git+https://github.com/mikenikles/serverless-chatbot.git"
   },
   "scripts": {
+    "deploy": "gcloud functions deploy reminderBotChecker --runtime nodejs8 --trigger-topic reminder-bot-checker",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
