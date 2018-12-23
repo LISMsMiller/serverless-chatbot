@@ -18,6 +18,11 @@ const findReminders = async () => {
   }
 }
 
+const setReminderStatusSent = async (reminderId) => {
+  await db.collection('reminders').doc(reminderId).update({ status: 'sent' })
+}
+
 module.exports = {
-  findReminders
+  findReminders,
+  setReminderStatusSent
 }

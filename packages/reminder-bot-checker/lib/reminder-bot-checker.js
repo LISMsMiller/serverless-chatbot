@@ -1,4 +1,4 @@
-const { findReminders } = require('./db')
+const { findReminders, setReminderStatusSent } = require('./db')
 const { sendMessage } = require('./pubsub')
 
 exports.reminderBotChecker = async (event, context) => {
@@ -23,6 +23,7 @@ exports.reminderBotChecker = async (event, context) => {
       threadName: reminder.thread,
       message: `Your reminder: ${reminder.subject}`
     })
+    setReminderStatusSent(reminderId)
     reminderIndex++
   }
 }
