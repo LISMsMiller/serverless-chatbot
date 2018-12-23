@@ -6,6 +6,7 @@
   "scripts": {
     "deploy:reminder-bot-receiver": "lerna run deploy --stream --scope=\"reminder-bot-receiver\"",
     "deploy:reminder-bot-sender": "lerna run deploy --stream --scope=\"reminder-bot-sender\"",
+    "deploy:reminder-bot-scheduler": "lerna run deploy --stream --scope=\"reminder-bot-scheduler\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
