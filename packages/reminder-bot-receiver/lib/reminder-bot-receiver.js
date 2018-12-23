@@ -1,4 +1,5 @@
 const EVENT_HANDLERS = require('./event-handlers')
+const RESPONSE_HANDLERS = require('./response-handlers')
 
 exports.reminderBotReceiver = async (event, context) => {
   console.log(`Input received:
@@ -13,5 +14,11 @@ exports.reminderBotReceiver = async (event, context) => {
     await EVENT_HANDLERS[chatEventBody.type](chatEventBody)
   } catch (error) {
     console.error(new Error(`Couldn't process event due to: ${error}`))
+  }
+
+  try {
+    await RESPONSE_HANDLERS[chatEventBody.type](chatEventBody)
+  } catch (error) {
+    console.error(new Error(`Couldn't process response due to: ${error}`))
   }
 };
